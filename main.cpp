@@ -17,8 +17,8 @@ int main(){
     double income;
     double debts;
 	
-	const int EXP = 3000;
-	const double SAV = 0.02;
+    const int EXP = 3000;
+    const double SAV = 0.02;
     
     cout << "What is your family name?" << endl;
     cin >> lName;
@@ -32,7 +32,7 @@ int main(){
     cout << "What is the family debt?" << endl;
 	cin >> debts;
     
-	int expenses = EXP * familySize;
+    int expenses = EXP * familySize;
     double payments = debts / 12.0;
     double savings = familySize*(SAV*(income-debts));
     
