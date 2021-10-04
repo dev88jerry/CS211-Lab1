@@ -9,6 +9,7 @@ Program takes inputs from the keyboard by the user to output according calculati
 
 #include <iostream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
 
@@ -38,7 +39,7 @@ int main(){
 	cin >> debts;
     
 	///variables declaration and calculations
-	int expenses = EXP * familySize;
+	double expenses = EXP * familySize;
     double payments = debts / 12.0;
     double savings = familySize*(SAV*(income-debts));
     
@@ -49,13 +50,13 @@ int main(){
     
 	cout << "Program assement for " << lName << endl;
 	cout << "Number of family members: " << familySize << endl;
-	cout << "Family income: $" << income << endl;
-	cout << "Family debts: $" << debts << endl;
+	cout << fixed << setprecision(2) << "Family income: $" << income << endl;
+	cout << fixed << setprecision(2) << "Family debts: $" << debts << endl;
 	
-	cout << endl << "*******************************" << endl;
-	cout << "Predicted family living expenses: $" << expenses << endl;
-	cout << "The monthly payments necessary to pay off the debt in one year: $" << payments << endl;	
-	cout << "The amount of money your family should save: $" << savings << endl;
+	cout << "*******************************" << endl;
+	cout << fixed << setprecision(2) << "Predicted family living expenses: $" << expenses << endl;
+	cout << fixed << setprecision(2) << "The monthly payments necessary to pay off the debt in one year: $" << payments << endl;	
+	cout << fixed << setprecision(2) << "The amount of money your family should save: $" << savings << endl;
     
     return 0;
 }
